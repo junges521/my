@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+ <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/banner_unit"
+        android:padding="7dip" >
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:clickable="true"
+            android:src="@drawable/booklist_menu_normal" />
+
+        <TextView
+            android:id="@+id/tv_mainpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            android:textColor="#000"
+            android:layout_weight="0.8"
+            android:text="@string/parents_chat"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:id="@+id/iv_right"
+             android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="0.1"
+            android:src="@drawable/back_normal" />
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg"
+        android:gravity="center"
+        android:paddingRight="10.0dp"
+        android:paddingLeft="10.0dp" >
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/title_back"
+            android:gravity="center"
+            android:text="@string/login_btn_cancel"
+            android:textColor="@color/white"
+            android:textSize="16.0sp"
+             />
+
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/title_comm"
+            android:gravity="center"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:background="@color/white" >
+
+        <EditText
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoLink="web"
+            android:background="@color/white"
+            android:gravity="top"
+            android:focusable="true"
+            android:imeOptions="actionDone"
+            android:lineSpacingExtra="6.0dp"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="10.0dp"
+            android:paddingTop="10.0dp"
+            android:hint="@string/please_inputcontent"
+            
+            android:textColor="@color/black"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="right"
+            android:padding="10.0dp"
+            android:text="100"
+            android:textColor="@color/black"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+</LinearLayout>

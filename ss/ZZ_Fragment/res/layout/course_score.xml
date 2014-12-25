@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/banner_unit"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/s_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/mycolor"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="基本信息"
+        android:layout_marginBottom="30dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/s_yuwen"
+        style="@style/textviewstyle"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_corner_no_bottom"
+        android:paddingLeft="20dp"
+        android:text="语文：60" />
+
+    <TextView
+        android:id="@+id/s_math"
+        style="@style/textviewstyle"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_no_corner_no_bottom"
+        android:paddingLeft="20dp"
+        android:text="数学：80" />
+
+    <TextView
+        android:id="@+id/s_english"
+        style="@style/textviewstyle"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_no_corner_no_bottom"
+        android:paddingLeft="20dp"
+        android:text="英语：78" />
+
+    <TextView
+        android:id="@+id/s_total"
+        style="@style/textviewstyle"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_no_corner_no_bottom"
+        android:paddingLeft="20dp"
+        android:text="总分：218" />
+
+    <TextView
+        android:id="@+id/s_order"
+        style="@style/textviewstyle"
+        android:background="@drawable/shape_bottom_corner_no_top"
+        android:paddingLeft="20dp"
+        android:text="班级排名：11" />
+
+</LinearLayout>

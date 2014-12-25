@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+ android:background="@drawable/banner_unit"
+    android:orientation="vertical" >
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/banner_unit"
+        android:padding="7dip" >
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:clickable="true"
+            android:src="@drawable/booklist_menu_normal" />
+        <TextView
+            android:id="@+id/tv_mainpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            android:textColor="#000"
+            android:layout_weight="0.8"
+            android:text="@string/school_news"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:id="@+id/iv_right"
+             android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="0.1"
+            android:src="@drawable/back_normal" />
+    </LinearLayout>
+      <ScrollView
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_weight="4"
+       android:scrollbars="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp" 
+        android:paddingRight="15dp">
+     
+
+        <TextView
+            android:id="@+id/news_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:textStyle="bold"
+            android:text="校园新闻"
+              android:textColor="#100000"
+            android:textSize="15sp" />
+
+             <TextView
+                 android:id="@+id/news_date"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignLeft="@+id/news_title"
+                 android:layout_below="@+id/news_title"
+                 android:layout_marginLeft="30dp"
+                 android:text="2013-09-08"
+                 android:textColor="#100000"
+                 android:textSize="15sp" 
+               android:gravity="center"
+                 android:paddingBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/news_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_title"
+            android:layout_toRightOf="@+id/news_date"
+            android:layout_marginLeft="50dp"
+              android:textColor="#100000"
+          android:layout_alignParentRight="true"
+            android:text="来源："
+            android:textSize="15sp" />
+        
+        <View 
+     android:id="@+id/line"
+            android:layout_below="@+id/news_date"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#000000"
+            />
+
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:id="@+id/news_photo"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/about_message1"
+            android:layout_below="@+id/line"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/p1" />
+        
+             <TextView
+            android:id="@+id/news_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         
+            android:layout_below="@+id/news_photo"
+            android:text="@string/test"
+            android:layout_margin="15dp"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        
+             
+             <TextView
+                 android:id="@+id/news_editor"
+                 android:layout_below="@+id/news_content"
+                 android:gravity="right"
+                 android:textColor="#100000"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:paddingBottom="20dp"
+                 android:text="@string/news_editor"
+                 ></TextView>        
+    </RelativeLayout>
+  </ScrollView>
+</LinearLayout>

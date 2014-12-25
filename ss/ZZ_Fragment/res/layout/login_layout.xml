@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mycolor"
+    android:gravity="top" >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="298dp"
+            android:layout_height="614dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/jxt_logo"
+                android:layout_width="80dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/login_tv_title"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/login_tv_title"
+                android:textAppearance="?android:attr/textAppearance" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/login_tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/login_tv_username"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <EditText
+                    android:id="@+id/login_et_username"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/please_inputname" />
+
+                <requestFocus />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/login_tv_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/login_tv_password"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <EditText
+                    android:id="@+id/login_et_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/please_inputpwd"
+                    android:inputType="textPassword" >
+                </EditText>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical" >
+
+                <CheckBox
+                    android:id="@+id/login_cb_rempwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_cb_rempwd" />
+
+                <CheckBox
+                    android:id="@+id/login_cb_autologin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/login_cb_rempwd"
+                    android:text="@string/login_cb_autologin"
+                    android:visibility="invisible" />
+
+                <CheckBox
+                    android:id="@+id/login_cb_showpwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/login_cb_rempwd"
+                    android:text="@string/login_cb_showpwd" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <RadioGroup
+                    android:id="@+id/login_rg_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/login_rb_tel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="@string/login_rb_tel" />
+
+                    <RadioButton
+                        android:id="@+id/login_rb_cer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/login_rb_cer" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp" >
+
+                <Button
+                    android:id="@+id/login_btn_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="80dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape"
+                    android:text="@string/login_btn_submit" />
+
+                <Button
+                    android:id="@+id/login_btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape"
+                    android:text="@string/login_btn_cancel" />
+            </LinearLayout>
+
+            <SlidingDrawer
+                android:id="@+id/slingdraw"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:handle="@+id/iv_handle"
+                android:content="@+id/author"
+                android:layout_height="200dp" >           <!--   slidingDrawer的高度必须指定 -->
+   
+
+                <ImageButton
+                    android:id="@+id/iv_handle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/arrow_up_float"
+                
+                    />
+                <TextView
+                    android:id="@+id/author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </SlidingDrawer>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

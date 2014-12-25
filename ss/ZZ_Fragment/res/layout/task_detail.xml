@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/banner_unit"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/banner_unit"
+        android:padding="7dip" >
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:clickable="true"
+            android:src="@drawable/booklist_menu_normal" />
+
+        <TextView
+            android:id="@+id/tv_mainpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.8"
+            android:gravity="center_horizontal"
+            android:text="@string/main_page"
+            android:textColor="#000"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="0.1"
+            android:clickable="true"
+            android:src="@drawable/back_normal" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_head" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+          
+
+            <LinearLayout
+                android:id="@+id/ll_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/baby_photo"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/mycolor"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="作业详情信息"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/baby_name"
+                    style="@style/textviewstyle"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_corner_no_bottom"
+                    android:paddingLeft="20dp"
+                    android:text="科目：语文"
+                   />
+
+                <TextView
+                    android:id="@+id/baby_nickname"
+                    style="@style/textviewstyle"
+                    android:background="@drawable/shape_no_corner_no_bottom"
+                    android:text="内容：完成课本p31第二题" />
+
+                <TextView
+                    android:id="@+id/baby_sex"
+                    style="@style/textviewstyle"
+                    android:background="@drawable/shape_no_corner_no_bottom"
+                    android:text="备注：作页格式" />
+
+                <TextView
+                    android:id="@+id/baby_birthday"
+                    style="@style/textviewstyle"
+                    android:text="作业上交时间：2014-06-09"
+                    android:background="@drawable/shape_bottom_corner_no_top" />
+            </LinearLayout>
+</LinearLayout>
+            
+    </ScrollView>
+
+
+</RelativeLayout>
